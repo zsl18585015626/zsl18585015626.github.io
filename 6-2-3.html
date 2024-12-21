@@ -38,6 +38,7 @@
     <body>
         <header>
             <h1>欢迎来到贵阳十八中</h1>
+            <h2>Face the fear,make the future</h2>
         </header>
         <nav>
             <a href="#about">关于我们</a>
@@ -60,11 +61,3 @@
         </main>
     </body>
 </html>
-from flask import Flask, render_template, request
-
-app = Flask(__name__)
-# 定义路由
-@app.route('/')
-def index():
-    return render_template('6-2-3.html')
-app.run(host='0.0.0.0', port=5000)
