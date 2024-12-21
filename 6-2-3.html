@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <title>贵阳十八中</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                font-size: 16px;
+                line-height: 1.5;
+            }
+            header {
+                background-color: #333;
+                color: #fff;
+                padding: 20px;
+            }
+            nav {
+                background-color: #eee;
+                padding: 10px;
+            }
+            main {
+                padding: 20px;
+            }
+            section {
+                margin-bottom: 20px;
+            }
+            h1, h2 {
+                margin-top: 0;
+            }
+            ul {
+                list-style: none;
+                padding: 0;
+            }
+            li {
+                margin-bottom: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>欢迎来到贵阳十八中</h1>
+        </header>
+        <nav>
+            <a href="#about">关于我们</a>
+            <a href="#news">最新公告</a>
+            <a href="#contact">联系我们</a>
+        </nav>
+        <main>
+            <section id="about">
+                <h2>关于我们</h2>
+                <p>.我们是贵阳的一所学校</p>
+                <a href="https://baike.baidu.com/item/%E8%B4%B5%E9%98%B3%E5%B8%82%E7%AC%AC%E5%8D%81%E5%85%AB%E4%B8%AD%E5%AD%A6/2481975?fr=ge_ala">点我</a>
+            </section>
+            <section id="news">
+                <h2>最新公告</h2>
+                <ul>
+                    <li>月考成绩将于12月23日公布</li>
+                    <li>创客社团招新！</li>
+                </ul>
+            </section>
+        </main>
+    </body>
+</html>
+from flask import Flask, render_template, request
+
+app = Flask(__name__)
+# 定义路由
+@app.route('/')
+def index():
+    return render_template('6-2-3.html')
+app.run(host='0.0.0.0', port=5000)
